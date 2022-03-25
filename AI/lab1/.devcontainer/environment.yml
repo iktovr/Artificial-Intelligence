@@ -1,0 +1,11 @@
+name: py38
+channels:
+  - defaults
+dependencies:
+  - python=3.8
+  - torchvision
+  - tensorflow
+  - jupyter
+  - matplotlib
+  - scikit-learn
+prefix: C:\winapp\Miniconda3\envs\py38
