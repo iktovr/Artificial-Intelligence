@@ -1,0 +1,32 @@
+((* if not cell_style is defined *))
+    ((*- set cell_style = 'style_jupyter.tex.j2' -*))
+((* endif *))
+((* extends cell_style *))
+
+((* block docclass *))
+\documentclass[pdf, unicode, 12pt, a4paper, oneside, fleqn]{article}
+((* endblock docclass *))
+
+((* block maketitle *))
+	\section*{}
+((* endblock maketitle *))
+
+((* block packages *))
+	\usepackage[utf8]{inputenc}
+	\usepackage[T2B]{fontenc}
+	\usepackage[english,russian]{babel}
+	\usepackage{nopageno}
+	((( super() )))
+((* endblock packages *))
+
+((* block margins *))
+	\oddsidemargin=-0.4mm
+	\textwidth=160mm
+	\topmargin=4.6mm
+	\textheight=210mm
+((* endblock margins *))
+
+((* block commands *))
+	((( super() )))
+	\pagestyle{plain}
+((* endblock commands *))
