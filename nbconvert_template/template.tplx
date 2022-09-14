@@ -4,7 +4,7 @@
 ((* extends cell_style *))
 
 ((* block docclass *))
-\documentclass[pdf, unicode, 12pt, a4paper, oneside, fleqn]{article}
+\documentclass[pdf, unicode, 10pt, a4paper, oneside, fleqn]{article}
 ((* endblock docclass *))
 
 ((* block maketitle *))
@@ -29,4 +29,12 @@
 ((* block commands *))
 	((( super() )))
 	\pagestyle{plain}
+	\setcounter{secnumdepth}{0}
 ((* endblock commands *))
+
+((*- block figure scoped -*))
+    \begin{center}
+    \adjustimage{scale=0.6, max width=\textwidth, min height=0.25\textheight}{((( filename )))}
+    \end{center}
+    { \hspace*{\fill} \\}
+((*- endblock figure -*))
