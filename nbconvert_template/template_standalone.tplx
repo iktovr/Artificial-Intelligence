@@ -1,0 +1,38 @@
+((* if not cell_style is defined *))
+    ((*- set cell_style = 'style_jupyter.tex.j2' -*))
+((* endif *))
+((* extends cell_style *))
+
+((* block docclass *))
+\documentclass[pdf, unicode, 10pt, a4paper, oneside, fleqn]{article}
+((* endblock docclass *))
+
+((* block maketitle *))
+((* endblock maketitle *))
+
+((* block packages *))
+	\usepackage[utf8]{inputenc}
+	\usepackage[T2B]{fontenc}
+	\usepackage[english,russian]{babel}
+	((( super() )))
+((* endblock packages *))
+
+((* block margins *))
+	\oddsidemargin=-0.4mm
+	\textwidth=160mm
+	\topmargin=4.6mm
+	\textheight=210mm
+((* endblock margins *))
+
+((* block commands *))
+	((( super() )))
+	\pagestyle{plain}
+	\setcounter{secnumdepth}{0}
+((* endblock commands *))
+
+((*- block figure scoped -*))
+    \begin{center}
+    \adjustimage{scale=0.6, max width=\textwidth, min height=0.25\textheight}{((( filename )))}
+    \end{center}
+    { \hspace*{\fill} \\}
+((*- endblock figure -*))
