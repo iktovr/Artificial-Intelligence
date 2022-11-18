@@ -34,7 +34,7 @@
 
 ((*- block figure scoped -*))
     \begin{center}
-    \adjustimage{scale=0.6, max width=\textwidth, min height=0.25\textheight}{((( filename )))}
+    \adjustimage{scale=0.6, min height=0.25\textheight, max width=\textwidth}{((( filename )))}
     \end{center}
     { \hspace*{\fill} \\}
 ((*- endblock figure -*))
